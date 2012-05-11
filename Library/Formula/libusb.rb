@@ -17,6 +17,7 @@ class Libusb < Formula
 
   def install
     ENV.universal_binary if ARGV.build_universal?
+    ENV["CFLAGS"] += " -arch i386 -arch x86_64 "
     system "./autogen.sh" if ARGV.build_head?
     system "./configure", "--prefix=#{prefix}", "--disable-dependency-tracking"
     system "make install"
