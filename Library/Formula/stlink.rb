@@ -7,7 +7,10 @@ class Stlink < Formula
   homepage 'https://github.com/texane/stlink'
   head 'https://github.com/texane/stlink.git'
 
-  # depends_on 'cmake' => :build
+  depends_on 'autoconf'
+  depends_on 'automake'
+  depends_on 'libusb'
+  depends_on 'pkg-config'
 
   def install
     system "./autogen.sh"
