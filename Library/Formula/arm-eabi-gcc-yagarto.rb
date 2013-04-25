@@ -5,8 +5,8 @@ require 'find'
 
 class YagartoBinutils < Formula
   homepage 'http://yagarto.de/'
-  url 'http://www.yagarto.de/source/toolchain/binutils-2.22.tar.bz2'
-  sha1 '65b304a0b9a53a686ce50a01173d1f40f8efe404'
+  url 'http://yagarto.de/source/toolchain/binutils-2.23.1.tar.bz2'
+  sha1 '587fca86f6c85949576f4536a90a3c76ffc1a3e1'
 
   def patches
     Dir["#{ENV['YAGARTO_BUILDPATH']}/patches/binutils-*.patch"]
@@ -41,11 +41,11 @@ end
 
 class YagartoGcc < Formula
   homepage 'http://yagarto.de/'
-  url 'http://www.yagarto.de/source/toolchain/gcc-4.7.1.tar.bz2'
-  sha1 '3ab74e63a8f2120b4f2c5557f5ffec6907337137'
+  url 'http://yagarto.de/source/toolchain/gcc-4.7.2.tar.bz2'
+  sha1 'a464ba0f26eef24c29bcd1e7489421117fb9ee35'
 
   def patches
-    "#{ENV['YAGARTO_BUILDPATH']}/patches/gcc-4.7.1.patch"
+    "#{ENV['YAGARTO_BUILDPATH']}/patches/gcc-4.7.2.patch"
   end
 
   def boot target, prefix, newlib
@@ -76,9 +76,9 @@ class YagartoGcc < Formula
 end
 
 class YagartoGdb < Formula
-  url 'http://www.yagarto.de/source/toolchain/gdb-7.4.1.tar.bz2'
+  url 'http://www.yagarto.de/source/toolchain/gdb-7.5.1.tar.bz2'
   homepage 'http://yagarto.de/'
-  sha1 '1b0f8c3778d4b10c8d2be6922ac01a9900e8116c'
+  sha1 'd04c832698ac470a88788e719d19ca7c1d4d803d'
 
   def install target, prefix
     system "./configure", "--target=#{target}", "--prefix=#{prefix}", "--disable-shared",
@@ -90,9 +90,9 @@ end
 
 class ArmEabiGccYagarto < Formula
   homepage 'http://www.yagarto.de'
-  url 'http://www.yagarto.de/source/toolchain/build-scripts-20120616.tar.bz2'
-  version '20120616'
-  sha1 '318af3b04b6b3087ddac12ac83a8c036551b2575'
+  url 'http://www.yagarto.de/source/toolchain/build-scripts-20121222.tar.bz2'
+  version '20121222'
+  sha1 'bc5caf0bc28fc2a2dfab2def82b18309f0b47675'
 
   depends_on 'expat'
   depends_on 'gmp'
