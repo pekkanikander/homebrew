@@ -88,7 +88,7 @@ class YagartoGdb < Formula
   end
 end
 
-class ArmEabiYagarto < Formula
+class ArmEabiGccYagarto < Formula
   homepage 'http://www.yagarto.de'
   url 'http://www.yagarto.de/source/toolchain/build-scripts-20120616.tar.bz2'
   version '20120616'
